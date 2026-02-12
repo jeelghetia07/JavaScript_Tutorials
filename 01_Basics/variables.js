@@ -1,7 +1,8 @@
 const accountId = 14453
 let accountEmail = "jeel@gmail.com"
-var accountPass = "12345"
+var accountPass = "12345"       // dont use var becoz it creates an issue in the block part.
 accountCity = "Rajkot"
+let accountState;       // stores the value UNDEFINED.
 
 // accountId = 2
 accountEmail = "jeel123@GOOGLE.com"
