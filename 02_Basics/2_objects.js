@@ -31,4 +31,15 @@ const obj3 = {...obj1, ...obj2}
 
 console.log(obj3);
 
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "jeel"
+}
+
+const {courseInstructor: instructor} = course   // this can be used for....courseInstructor without mentioning the course.
+
+// console.log(courseInstructor);
+console.log(instructor);
+
 
