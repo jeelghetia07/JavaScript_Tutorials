@@ -1,8 +1,7 @@
 const programming = ["js", "rb", "cpp", "java", "python"]
 
 // programming.forEach(function (item) {
-//     console.log(item);
-    
+//     console.log(item);  
 // })
 
 // programming.forEach((item) => {
