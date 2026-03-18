@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class = "language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){    
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("Python")           // these both func calls traverse the entire tree to add a node. thats not optimal
+    addLanguage("TypeScript")
+
+    function addOptiLanguage(langName){     // this is the optimized function that adds a lang....
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))       // this is optimized. use appendChild that will not traverse the entire tree.
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("GoLang")
+
+    // Edit
+    const secLang = document.querySelector("li:nth-child(2)")
+    // secLang.innerHTML = "Mojo"         // this again traverses the entrie tree so we better use something else.
+    const newLi = document.createElement('li');
+    newLi.textContent = "Mojo"
+    secLang.replaceWith(newLi)
+
+
+    // Edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+
+    // Remove
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+</script>
+</html>
