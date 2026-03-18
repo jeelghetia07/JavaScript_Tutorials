@@ -7,7 +7,7 @@ buttons.forEach(function(button){
         console.log(e);
         console.log(e.target);
         switch (e.target.id) {
-            case "grey":
+            case "grey":        // we can also use if else here.
                 body.style.backgroundColor = e.target.id;
                 break;
             case "white":
